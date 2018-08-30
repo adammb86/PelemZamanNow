@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/edt_cari_pelem"
+        android:hint="@string/masukkan_nama_film_yang_dicari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btn_cari"
+        android:layout_below="@id/edt_cari_pelem"
+        android:background="@drawable/bg_background_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/cari_film"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_view_pelem"
+        android:layout_marginTop="2dp"
+        tools:listitem="@layout/list_pelem"
+        android:layout_below="@id/btn_cari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
